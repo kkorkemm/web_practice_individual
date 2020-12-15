@@ -1,0 +1,307 @@
+/*
+font-family: 'Amble-Bold';
+font-family: 'Amble-Light';
+font-family: 'Amble-Regular';
+font-family: 'Avenir-Light';
+font-family: 'Big John';
+font-family: 'Slim Joe';
+*/
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+:root {
+    --black: #1c1c1c;
+}
+
+body {
+    font-family: 'Amble-Light';
+    font-size: 22px;
+    color: var(--black);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Big John';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Amble-Bold';
+    font-size: 1.5rem;
+    color: var(--black);
+    padding: 15px 0;
+    text-align: center;
+    border: 3px solid var(--black);
+    transition: .2s color linear, .1s background ease;
+}
+
+.btn:hover {
+    background: var(--black);
+    color: #fff;
+}
+
+/* Header 
+------------------------------*/
+
+header {
+    /*background: url(../img/header/background.jpg) no-repeat center;
+    background-color: rgb(255, 106, 27);
+    background-color: linear-gradient(90deg, rgba(255,163,66,1) 0%, rgba(240,112,72,1) 51%, rgba(220,73,66,1) 100%);
+    background-blend-mode: soft-light;
+    */
+    background: url(../img/header/bg.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    padding: 50px;
+}
+
+.header__main {
+    margin: 0 auto;
+    width: 690px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1.5px;
+}
+
+.header__title {
+    margin-top: 220px;
+    font-size: 3rem;
+}
+
+.header__title:after, .block__title:after {
+    content: "";
+    display: block;
+    margin: 50px auto 45px;
+    width: 86px;
+    height: 2px;
+    background: #fff;
+}
+
+.header__text {
+    margin-bottom: 250px;
+    font-family: 'Amble-Regular';
+    line-height: 1.4;
+}
+
+/* Burger ----- */
+
+.burger__item {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+}
+
+.burger__item:before, .burger__item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.burger__item:before {
+    top: -10px;
+}
+
+.burger__item:after {
+    bottom: -10px;
+}
+
+/* --- */
+
+.scroll {
+    display: block;
+    width: 30px;
+    height: 50px;
+    margin: 0 auto 11px;
+    background: url(../img/header/mouse.svg) no-repeat;
+    transition: .3s transform ease;
+}
+
+.scroll:hover {
+    transform: translateY(-20px);
+}
+
+/* Block
+------------------------------*/
+
+.block {
+    padding: 115px 0;
+}
+
+.block__main {
+    margin: 0 auto;
+    width: 770px;
+    text-align: center;
+}
+
+.block__title {
+    font-size: 1.875rem;
+}
+
+.block__title:after {
+    background: var(--black);
+}
+
+.block--work, .block--about {
+    padding-bottom: 80px;
+}
+
+.block--clients {
+    background: #f4f4f4;
+}
+
+/* Big image block
+------------------------------*/
+
+.img-block {
+    padding: 200px 0;
+    text-align: center;
+    background-blend-mode: soft-light;
+}
+
+.img-block__button {
+    display: block;
+    margin: 0 auto;
+    padding: 25px 0;
+    width: 430px;
+    border: 3px solid #fff;
+    font-family: 'Amble-Bold';
+    font-size: 1.875rem;
+    color: #fff;
+    transition: background .2s linear, .1s ease color;
+}
+
+.img-block__button:hover {
+    color: var(--black);
+    background: #fff;
+}
+
+/* Pure creativity
+------------------------------*/
+
+.img-block--creativity {
+    background: url(../img/pure_creativity/background.jpg) no-repeat center, var(--black);
+}
+
+/* Work
+------------------------------*/
+
+.work-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 680px;
+    margin: 0 auto;
+}
+
+.work-nav__btn {
+    text-transform: uppercase;
+    font-family: 'Slim Joe';
+    font-size: 1.125rem; 
+}
+
+.work-nav__btn:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    margin-top: 5px;
+    background: #ccc;
+    opacity: 0;
+    transition: .1s opacity linear;
+}
+
+.work-nav__btn:hover:after {
+    opacity: 1;
+}
+
+.work-nav__btn:active {
+    font-family: 'Big John';
+}
+
+.work-content {
+    padding: 80px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    grid-row-gap: 20px;
+}
+
+.work-content__item {
+   
+}
+
+.work-content__img {
+    width: 31%; 
+}
+
+.btn--work {
+    width: 370px;
+}
+
+
+/* Help
+------------------------------*/
+
+.img-block--help {
+    background: url(../img/help/background.jpg) no-repeat center, var(--black);
+}
+
+/* Clients
+------------------------------*/
+
+.clients {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.clients__item--google {
+    display: block;
+    width: 150px;
+    height: 60px;
+    background: var(--black), url(../img/clients/google.png);
+    background-blend-mode: soft-light;
+}
+
+
+
+
