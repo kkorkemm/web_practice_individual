@@ -6,11 +6,12 @@
     <title>web practice</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/fonts.css">
+    <script src="https://kit.fontawesome.com/6fb6bb1028.js" crossorigin="anonymous"></script>
 </head>
 <body>
    
+   <!-- Header -->
     <header>
-      
         <button type="button" class="burger">
             <span class="burger__item"></span>
         </button>
@@ -21,8 +22,7 @@
                 <p class="header__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
            </div> <!-- header__main -->
             <button type="button" class="scroll"></button>    
-        </div> <!-- container -->
-        
+        </div> <!-- container --> 
     </header>
     
     <!-- Introduction -->
@@ -71,16 +71,30 @@
                 </ul>
             </div> <!-- block__main -->
             
-            <div class="work-content">
-                <div class="work-content__item">
-                    <div class="work-content__img">
-                        <img src="img/work/first.jpg" alt="">
-                    </div> <!-- work-content__img -->
-                    <div class="work-content__text">
+            <div class="work-grid">
+                <div class="work-grid__item">
+                    <img src="img/work/first.jpg" alt="">
+                    <div class="work-grid__text">
                         
-                    </div>
-                </div>  
-            </div> <!-- work-content -->
+                    </div> <!-- work-grid__text -->
+                </div> <!-- work-grid__item -->
+                 <div class="work-grid__item">
+                    <img src="img/work/second.jpg" alt="">
+                </div>
+                 <div class="work-grid__item">
+                    <img src="img/work/third.jpg" alt="">
+                </div>
+                 <div class="work-grid__item">
+                    <img src="img/work/fourth.jpg" alt="">
+                </div>
+                 <div class="work-grid__item">
+                    <img src="img/work/fifth.jpg" alt="">
+                </div>
+                 <div class="work-grid__item">
+                    <img src="img/work/sixth.jpg" alt="">
+                </div>
+            </div> <!-- work-grid -->
+            
             
             <a href="#" class="btn btn--work">Show me more</a>
             
@@ -124,57 +138,155 @@
     </section>
     
     <!-- About -->
-    <section class="bloc k">
+    <section class="block block--about">
         <div class="container">
-            
-        </div> <!-- container -->
-    </section>
-    
-    <!-- Video -->
-    <section>
-        <div class="container">
-            
-        </div>
-    </section>
-    
-    <!-- Ipads -->
-    <section class="bloc k">
-        <div class="container">
-            
-        </div> <!-- container -->
-    </section>
-    
-    <!-- Get quote -->
-    <section>
-        <div class="container">
-            
-        </div>
-    </section>
-    
-    <!-- Get in touch -->
-    <section class="block">
-        <div class="container">
-            
+           
             <div class="block__main">
-                <h2 class="block__title">get in touch</h2>
+                <h2 class="block__title">About us</h2>
                 <p class="block__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
                 </p>
             </div> <!-- block__main -->
             
+            <div class="team-grid">
+                <div class="team-grid__member team-grid__member--first">
+                    <div class="team-grid__text">
+                        
+                    </div> <!-- team-grid__text -->
+                </div>
+                <div class="team-grid__member team-grid__member--second">
+                    <div class="team-grid__text">
+                        
+                    </div> <!-- team-grid__text -->
+                </div>
+                <div class="team-grid__member team-grid__member--third">
+                    <div class="team-grid__text">
+                        
+                    </div> <!-- team-grid__text -->
+                </div>
+                <div class="team-grid__apply">
+                    <p class="apply__text">we are hiring</p>
+                    <a href="#" class="btn btn--about">Apply</a>
+                </div>
+            </div> <!-- team-grid -->
+            
+        </div> <!-- container -->
+    </section>
+    
+    <!-- Video -->
+    <section class="img-block img-block--video">
+        <div class="container">
+           <button type="button" class="video-btn">
+               <i class="fas fa-play play-icon"></i>
+           </button>
+        </div>
+    </section>
+    
+    <!-- Ipads -->
+    <section class="block">
+        <div class="container">
+           
+            <div class="block__main">
+                <h2 class="block__title">Why choose us</h2>
+                <p class="block__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                </p>
+            </div> <!-- block__main -->
+            
+            <div class="ipads">
+                <div class="ipads__item">
+                    <div class="ipads__img">
+                        <img src="img/ipads/iphone.svg" alt="iphone">
+                    </div> <!-- ipads__img -->
+                    <h3 class="ipads__title">App Design</h3>
+                    <p class="ipads__text">
+                        Lorem ipsum dolor sit amet, consectetur adip- isicing elit, sed do eiusmod tempor <br> ilabore et dolore.
+                    </p>
+                </div> <!-- ipads__item -->
+                <div class="ipads__item">
+                    <div class="ipads__img">
+                        <img src="img/ipads/ipad_air.svg" alt="iphone">
+                    </div> <!-- ipads__img -->
+                    <h3 class="ipads__title">Responsive Layout</h3>
+                    <p class="ipads__text">
+                        Lorem ipsum dolor sit amet, consectetur adip- isicing elit, sed do eiusmod tempor <br> ilabore et dolore.
+                    </p>
+                </div> <!-- ipads__item -->
+                <div class="ipads__item">
+                    <div class="ipads__img">
+                        <img src="img/ipads/mac.png" alt="iphone">
+                    </div> <!-- ipads__img -->
+                    <h3 class="ipads__title">Pixel Perfect Design</h3>
+                    <p class="ipads__text">
+                        Lorem ipsum dolor sit amet, consectetur adip- isicing elit, sed do eiusmod tempor <br> ilabore et dolore.
+                    </p>
+                </div> <!-- ipads__item -->
+            </div> <!-- ipads -->
+            
+        </div> <!-- container -->
+    </section>
+    
+    <!-- Get quote -->
+    <section class="img-block img-block--quote">
+        <div class="container">
+            <a href="#" class="img-block__button">Get a quote now.</a>
+        </div> <!-- container -->
+    </section>
+    
+    <!-- Get in touch -->
+    <section class="block">
+        <div class="container">    
+            <div class="block__main">
+                <h2 class="block__title">get in touch</h2>
+                <p class="block__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                </p>
+            </div> <!-- block__main -->  
         </div> <!-- container -->
     </section>
     
     <!-- Form -->
-    <section>
-        <div class="container">
+    <section class="form-block">
+       
+        <div class="form-left">
+            <div class="form-left__inner">
+                <h3 class="form__title">our location</h3>
+                <ul class="location">
+                    <li class="location__item">174 Mimosa ST. NW</li>
+                    <li class="location__item">Casablanca, MA 20370</li>
+                    <li class="location__item">(212) 123 456 7</li>
+                    <li class="location__item">Samir Timezguida</li>
+                </ul>
+                <div class="social">
+                    <a href="#" target="_blank" class="social__item"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank" class="social__item"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" class="social__item"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" class="social__item"><i class="fab fa-vimeo-v"></i></a>
+                    <a href="#" target="_blank" class="social__item"><i class="fab fa-behance"></i></a>
+                </div> <!-- social -->
+            </div> <!-- form-left__inner -->
+        </div> <!-- form-left -->
+        
+        <div class="form-right">
             
-        </div> <!-- container -->
+            <form action="#" class="form">
+                <input class="form-input" type="text" placeholder="Name">
+                <input class="form-input" type="mail" placeholder="Email">
+                <input class="form-input form-input--message" type="text" placeholder="Message">
+                <button type="submit" class="btn btn--form">Send</button>
+            </form>
+            
+        </div> <!-- form-right -->
+        
     </section>
     
+    <!-- Footer -->
     <footer>
         <div class="container">
-            
+            <img src="img/footer/logo.png" alt="logo">
+            <p class="credits">
+                2014 &#169; <span class="credits__span">Samir Timezguida.</span> All Rights Reserved.
+            </p>
         </div> <!-- container -->
     </footer>
     
