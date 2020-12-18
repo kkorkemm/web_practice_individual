@@ -25,7 +25,7 @@ font-family: 'Slim Joe';
 body {
     font-family: 'Amble-Light';
     font-weight: 400;
-    font-size: 22px;
+    font-size: 1.375rem;
     color: var(--black);
     line-height: 1.6;
 }
@@ -85,11 +85,45 @@ header {
     background-size: cover;
     width: 100%;
     padding: 50px;
+    position: relative;
 }
 
-.header__main {
+.nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 15%;
+    width: 100%;
+    background: rgba(247, 215, 143, 0.3);
+    position: absolute;
+}
+
+.nav.show {
+    display: flex;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.nav__link {
+    font-family: 'Amble-Regular';
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color .2s linear;
+}
+
+.nav__link:hover {
+    color: var(--black);
+}
+
+.header-intro {
     margin: 0 auto;
-    width: 690px;
+    max-width: 690px;
     text-align: center;
     color: #fff;
     letter-spacing: 1.5px;
@@ -123,6 +157,7 @@ header {
     width: 30px;
     height: 4px;
     background: #fff;
+    z-index: 4;
 }
 
 .burger__item:before, .burger__item:after {
@@ -167,7 +202,7 @@ header {
 
 .block__main {
     margin: 0 auto;
-    width: 770px;
+    max-width: 770px;
     text-align: center;
 }
 
@@ -227,7 +262,8 @@ header {
 .work-nav {
     display: flex;
     justify-content: space-between;
-    width: 680px;
+    flex-wrap: wrap;
+    max-width: 680px;
     margin: 0 auto;
 }
 
@@ -261,7 +297,6 @@ header {
     margin: 80px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-columns: 370px;
     grid-auto-rows: 420px;
     column-gap: 30px;
     grid-row-gap: 20px;
@@ -350,6 +385,7 @@ header {
     display: flex;
     width: auto;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 80px;
 }
 
@@ -406,6 +442,7 @@ header {
     display: flex;
     justify-content: center;
     background: #000;
+    background-size: cover;
     transition: opacity .1s linear;
 }
 
@@ -444,13 +481,14 @@ header {
 }
 
 .team-grid__icon {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-self: flex-end;
     width: 45px;
     height: 45px;
     border: 3px solid #fff;
     border-radius: 50%;
-    padding-top: 3px;
     text-align: center;
     color: #fff;
     transition: background .1s linear, color .1s linear;
@@ -496,13 +534,16 @@ header {
 }
 
 .video-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 3px;
     border: 5px solid #fff;
     border-radius: 50%;
     width: 65px;
     height: 65px;
-    text-align: center;
     color: #fff;
-    padding-left: 3px;
     transition: background .1s linear, color .1s linear;
 }
 
@@ -598,12 +639,42 @@ header {
     background: #e4e4e4;
 }
 
+.form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 670px;
+}
+
+/*
+
+.form-block {
+    background: -webkit-linear-gradient(90deg, #f2f2f2 38%, #e4e4e4 38%);
+    background: -moz-linear-gradient(90deg, #f2f2f2 38%, #e4e4e4 38%);
+    background: linear-gradient(90deg, #f2f2f2 38%, #e4e4e4 38%);
+}
+
+.form-inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 0;
+}
+
+.form-right {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 670px;
+}
+
+*/
+
 .form__title {
     font-size: 1.5rem;
 }
 
 .location {
-    margin: 30px 0;
+    padding: 30px 0;
     font-style: italic;
 }
 
@@ -621,13 +692,6 @@ header {
 
 .social__item:hover {
     color: var(--orange);
-}
-
-.form {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 670px;
 }
 
 input {
@@ -669,7 +733,6 @@ input {
     width: 180px;
 }
 
-
 /* Footer
 ------------------------------*/
 
@@ -692,4 +755,293 @@ footer {
 }
 
 
+/* Responsive 
+------------------------------*/
+
+/* 993 - 1200 */
+@media screen and (max-width: 1200px) {
+    
+    .container {
+        width: 960px;
+    }
+    
+    .work-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .clients {
+        justify-content: space-around;
+        margin-top: 65px;
+    }
+    
+    .clients__item {
+        margin-top: 5px;
+    }
+    
+    .form-left {
+        padding-right: 70px;
+    }
+    
+    .form-right {
+        padding-left: 70px;
+    }
+    
+    .form {
+        width: 500px;
+    }
+    
+    .form-input + .form-input {
+        margin-top: 20px;
+    }
+    
+    .form-input, .form-input--message {
+        width: 400px;
+    }
+    
+    .btn--form {
+        margin-left: 0;
+    }
+    
+}
+
+/* 901 - 992 */
+@media screen and (max-width: 992px) {
+    
+    :root {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 720px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        grid-row-gap: 20px;
+    }
+    
+    .img-block {
+        padding: 110px 0;
+    }
+    
+    .block {
+        padding: 80px 0;
+    }
+}
+
+/* 769 - 900 */
+@media screen and (max-width: 900px) {
+    
+    .form-block {
+        flex-direction: column;
+    }
+    
+    .form-left, .form-right {
+        padding: 35px 0;
+    }
+    
+    .form-left__inner, .form {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .location {
+        padding: 10px 0;
+    }
+    
+    .form {
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+    }
+    
+    .form-input, .btn--form {
+        width: 100%;
+    }
+    
+    footer {
+        padding: 40px 0;
+    }
+}
+
+/* */
+@media screen and (max-width: 768px) {
+    
+    .container {
+        width: 540px;
+    }
+    
+    :root {
+        font-size: 12px;
+    }
+    
+    .header__title {
+        margin-top: 150px;
+    }
+    
+    .header__text {
+        margin-bottom: 150px;
+    }
+    
+    .block {
+        padding: 50px 0;
+    }
+    
+    .block__title:after {
+        margin: 30px auto;
+    }
+    
+    .img-block {
+        padding: 80px 0;
+    }
+    
+    .img-block__button {
+        padding: 20px 0;
+        width: 330px;
+    }
+    
+    .work-grid {
+        margin: 50px 0;
+        grid-template-columns: 1fr;
+    }
+    
+    .ipads {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+    }
+    
+    .ipads__item + .ipads__item {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    
+    .ipads__title {
+        margin: 5px 0;
+        font-size: 1.8rem;
+    }
+    
+    .ipads__text {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+    
+    .ipad-slider {
+        margin-top: 40px;
+    } 
+    
+    br {
+        display: none;
+    }
+    
+    .nav {
+        height: 19%;
+    }
+    
+    .header-nav {
+        flex-wrap: wrap;
+    }
+    
+    .scroll {
+        display: none;
+    }
+    
+    .footer__logo {
+        width: 300px;
+    }
+    
+    .credits {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    
+    .container {
+        width: 90%;
+    }
+    
+    :root {
+        font-size: 10px;
+    }
+    
+    .nav {
+        height: 25%;
+    }
+    
+    header {
+        padding: 30px;
+    }
+    
+    .header__title {
+        margin-top: 70px;
+    }
+    
+    .header__title:after, .block__title:after {
+        margin: 20px auto;
+    }
+    
+    .header__text {
+        margin-bottom: 70px;
+    }
+    
+    .block {
+        padding: 35px 0;
+    }
+    
+    .clients {
+        margin-top: 40px;
+    }
+    
+    .team-grid {
+        column-gap: 20px;
+    }
+    
+    footer {
+        padding: 20px 0;
+    }
+    
+    .footer__logo {
+        width: 200px;
+    }
+    
+    .credits {
+        margin-top: 10px;
+    }
+    
+    .work-nav {
+        justify-content: space-around;
+    }
+    
+}
+
+
+@media screen and (max-width: 430px) {
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form {
+        width: 250px;
+    }
+    
+    .btn--work, .img-block__button {
+        width: 100%;
+    }
+    
+    .work-grid, .team-grid {
+        margin-top: 20px;
+    }
+    
+    .team-grid__apply {
+        justify-content: center;
+    }
+    
+    .clients {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
